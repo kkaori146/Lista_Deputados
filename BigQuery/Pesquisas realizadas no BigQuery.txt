@@ -9,15 +9,6 @@ where Ano Between 2018 and 2022
 GROUP BY Deputado, Tipo ORDER BY Despesas DESC;
 ------------------------------------------------------------------------
 
-# Retorno dos Partidos com maior despesa (2018-2021)
-=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
-
-select Partido as Partido,
-SUM(valor) as Despesas
-from `euphoric-anchor-362800.deputados.lista_politicos`
-GROUP BY Partido ORDER BY Despesas DESC;
-------------------------------------------------------------------------
-
 # Retorno do Deputado com maior despesa nos últimos 8 anos
 =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
 
@@ -37,3 +28,6 @@ SUM(Valor) as Despesas
 from `euphoric-anchor-362800.deputados.lista_politicos`
 where Ano Between 2015 and 2022
 group by Ano order by Ano ASC;
+
+------------------------------------------------------------------------
+
